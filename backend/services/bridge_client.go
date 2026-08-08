@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	defaultBridgeURL     = "http://192.168.1.164:8585"
+	defaultBridgeURL     = "http://192.168.1.164:8587"
 	bridgeRequestTimeout = 20 * time.Second
 )
 
