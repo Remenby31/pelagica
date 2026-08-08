@@ -68,6 +68,11 @@ func main() {
 	api.Get("/studios/health", handlers.GetStudiosHealth)
 	api.Get("/studios/:name/logo", handlers.GetStudioLogo)
 
+	api.Get("/catalogue/search", handlers.GetCatalogueSearch)
+	api.Get("/catalogue/media/:id", handlers.GetCatalogueMedia)
+	api.Get("/catalogue/status/:id", handlers.GetCatalogueStatus)
+	api.Post("/catalogue/download/:id", handlers.PostCatalogueDownload)
+
 	api.Get("/stats-consent", handlers.GetStatsConsent)
 	api.Post("/stats-consent", handlers.PostStatsConsent)
 

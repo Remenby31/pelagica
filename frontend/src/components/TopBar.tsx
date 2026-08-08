@@ -8,6 +8,7 @@ import {
     ChevronRight,
     ChevronsUpDown,
     Copy,
+    DownloadCloud,
     DotIcon,
     ExternalLink,
     Fingerprint,
@@ -862,6 +863,13 @@ const TopBar = ({ overlay = false }: { overlay?: boolean }) => {
                         )}
 
                         <Button asChild variant="ghost" size="sm">
+                            <Link to="/catalogue">
+                                <DownloadCloud className="h-4 w-4" />
+                                Catalogue
+                            </Link>
+                        </Button>
+
+                        <Button asChild variant="ghost" size="sm">
                             <Link to="/search">
                                 <Search className="h-4 w-4" />
                                 {t('search')}
@@ -929,6 +937,12 @@ const TopBar = ({ overlay = false }: { overlay?: boolean }) => {
                                 </Link>
                             </Button>
                         )}
+
+                        <Button asChild variant="ghost" size="icon" className="h-8 w-8">
+                            <Link to="/catalogue">
+                                <DownloadCloud className="h-4 w-4" />
+                            </Link>
+                        </Button>
 
                         <Button asChild variant="ghost" size="icon" className="h-8 w-8">
                             <Link to="/search">

@@ -40,6 +40,8 @@ const StudioPage = lazy(() => import('./pages/Studio/StudioPage.tsx'));
 const StudiosPage = lazy(() => import('./pages/Studios/StudiosPage.tsx'));
 const ItemsSectionPage = lazy(() => import('./pages/Items/ItemsSectionPage.tsx'));
 const LivetvPage = lazy(() => import('./pages/Live/LiveTvPage.tsx'));
+const CataloguePage = lazy(() => import('./pages/Catalogue/CataloguePage.tsx'));
+const CatalogueDetail = lazy(() => import('./pages/Catalogue/CatalogueDetail.tsx'));
 
 const queryClient = new QueryClient();
 
@@ -70,6 +72,11 @@ createRoot(document.getElementById('root')!).render(
                                         <Route
                                             path="/items/section"
                                             element={<ItemsSectionPage />}
+                                        />
+                                        <Route path="/catalogue" element={<CataloguePage />} />
+                                        <Route
+                                            path="/catalogue/:id"
+                                            element={<CatalogueDetail />}
                                         />
                                         <Route path="/login" element={<LoginPage />} />
                                         <Route path="/play/:itemId" element={<PlayerPage />} />
