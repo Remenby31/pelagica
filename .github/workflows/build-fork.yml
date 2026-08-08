@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/pelagica
+  IMAGE_NAME: ghcr.io/remenby31/pelagica
 
 permissions:
   contents: read
@@ -103,7 +103,7 @@ jobs:
 
       - name: Create multi-arch manifest
         run: |
-          IMAGE="ghcr.io/${{ github.repository_owner }}/pelagica"
+          IMAGE="ghcr.io/remenby31/pelagica"
           refs=()
           for digest_file in /tmp/digests/*; do
             digest=$(cat "$digest_file")
@@ -117,4 +117,4 @@ jobs:
 
       - name: Inspect manifest
         run: |
-          docker buildx imagetools inspect "ghcr.io/${{ github.repository_owner }}/pelagica:latest"
+          docker buildx imagetools inspect "ghcr.io/remenby31/pelagica:latest"
